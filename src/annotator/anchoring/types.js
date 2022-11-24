@@ -74,6 +74,23 @@ export class RangeAnchor {
   }
 
   /**
+   * 
+   * @param {Element} el 
+   * @returns {string}
+   */
+  selector(el) { 
+    let x = el.tagName;
+    if (el.id) {
+        x += '#' + el.id;
+    }
+    el.classList.forEach(c => x += '.' + c);
+    if (el.parentElement) {
+        return this.selector(el.parentElement) + ' > ' + x;
+    }
+    return x;
+  }
+
+  /**
    * @return {RangeSelector}
    */
   toSelector() {
@@ -91,6 +108,7 @@ export class RangeAnchor {
       startOffset: textRange.start.offset,
       endContainer,
       endOffset: textRange.end.offset,
+      fullCssSelector: this.selector(textRange.start.element),
     };
   }
 }

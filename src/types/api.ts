@@ -66,6 +66,7 @@ export type RangeSelector = {
   endContainer: string;
   startOffset: number;
   endOffset: number;
+  fullCssSelector?: string;
 };
 
 /**
