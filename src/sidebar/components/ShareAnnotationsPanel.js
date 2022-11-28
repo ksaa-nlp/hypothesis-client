@@ -34,7 +34,7 @@ function ShareAnnotationsPanel({ toastMessenger }) {
   const mainFrame = store.mainFrame();
   const focusedGroup = store.focusedGroup();
   const groupName = (focusedGroup && focusedGroup.name) || '...';
-  const panelTitle = `Share Annotations in ${groupName}`;
+  const panelTitle = `مشاركة التوسيم في ${groupName}`;
 
   // To be able to concoct a sharing link, a focused group and frame need to
   // be available
@@ -47,9 +47,9 @@ function ShareAnnotationsPanel({ toastMessenger }) {
   const copyShareLink = () => {
     try {
       copyText(/** @type {string} */ (shareURI));
-      toastMessenger.success('Copied share link to clipboard');
+      toastMessenger.success('تم نسخ رابط المشاركة بنجاح');
     } catch (err) {
-      toastMessenger.error('Unable to copy link');
+      toastMessenger.error('حدثت مشكلة اثناء عملية نسخ الرابط');
     }
   };
 
@@ -70,11 +70,10 @@ function ShareAnnotationsPanel({ toastMessenger }) {
               >
                 {notNull(focusedGroup).type === 'private' ? (
                   <p>
-                    Use this link to share these annotations with other group
-                    members:
+                    استخدم هذا الرابط لمشاركة الكلمات الموسمة مع الاخرين في نفس المجموعة
                   </p>
                 ) : (
-                  <p>Use this link to share these annotations with anyone:</p>
+                  <p>استخدم هذا الرابط لمشاركة الكلمات الموسمة مع الجميع</p>
                 )}
               </div>
               <div>
@@ -96,20 +95,19 @@ function ShareAnnotationsPanel({ toastMessenger }) {
               <p data-testid="sharing-details">
                 {notNull(focusedGroup).type === 'private' ? (
                   <span>
-                    Annotations in the private group{' '}
-                    <em>{notNull(focusedGroup).name}</em> are only visible to
-                    group members.
+                    الكلمات الموسمة في المجموعة الخاصة{' '}
+                    <em>{notNull(focusedGroup).name}</em> ستظهر فقط للاعضاء في نفس المجموعة
                   </span>
                 ) : (
                   <span>
-                    Anyone using this link may view the annotations in the group{' '}
+                    يمكن لاي احد يملك الرابط الاطلاع على المحتويات{' '}
                     <em>{notNull(focusedGroup).name}</em>.
                   </span>
                 )}{' '}
                 <span>
-                  Private (
-                  <Icon name="lock" classes="inline -mt-0.5" /> <em>Only Me</em>
-                  ) annotations are only visible to you.
+                  المجموعة (
+                  <Icon name="lock" classes="inline -mt-0.5" /> <em>الخاصة بي</em>
+                  ) الكلمات الموسمة ستظر لك فقط
                 </span>
               </p>
               <div className="text-[24px]">

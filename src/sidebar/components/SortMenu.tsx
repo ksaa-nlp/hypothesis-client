@@ -37,7 +37,7 @@ export default function SortMenu() {
     <div className="SortMenu">
       <Menu
         label={menuLabel}
-        title={`Sort by ${sortKey}`}
+        title={` الترتيب بحسب ${sortKey}`}
         align="right"
         menuIndicator={false}
       >

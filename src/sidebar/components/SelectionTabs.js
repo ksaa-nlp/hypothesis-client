@@ -128,7 +128,7 @@ function SelectionTabs({ annotationsService, isLoading, settings }) {
           label="Annotations"
           onSelect={() => selectTab('annotation')}
         >
-          Annotations
+         الكلمات الموسمة
         </Tab>
         <Tab
           count={noteCount}
@@ -137,7 +137,7 @@ function SelectionTabs({ annotationsService, isLoading, settings }) {
           label="Page notes"
           onSelect={() => selectTab('note')}
         >
-          Page Notes
+          ملاحظات الصفحة
         </Tab>
         {orphanCount > 0 && (
           <Tab
@@ -160,29 +160,29 @@ function SelectionTabs({ annotationsService, isLoading, settings }) {
             variant="primary"
             style={applyTheme(['ctaBackgroundColor'], settings)}
           >
-            New note
+            ملاحظة جديدة
           </LabeledButton>
         </div>
       )}
       {!isLoading && showNotesUnavailableMessage && (
         <Frame classes="text-center">
           <span data-testid="notes-unavailable-message">
-            There are no page notes in this group.
+            لا توجد ملاحظات للصفحة في هذة المجموعة
           </span>
         </Frame>
       )}
       {!isLoading && showAnnotationsUnavailableMessage && (
         <Frame classes="text-center">
           <span data-testid="annotations-unavailable-message">
-            There are no annotations in this group.
+            لا توجد كلمات موسمة في هذة المجموعة
             <br />
-            Create one by selecting some text and clicking the{' '}
+            ابدأ بالتوسيم عن طريق تحديد بعض النصوص والنقر على زر{' '}
             <Icon
               classes="inline m-0.5 -mt-0.5"
               name="annotate"
               title="Annotate"
             />{' '}
-            button.
+            .
           </span>
         </Frame>
       )}

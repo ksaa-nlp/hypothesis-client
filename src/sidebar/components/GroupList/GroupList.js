@@ -152,13 +152,13 @@ function GroupList({ settings }) {
         <GroupListSection
           expandedGroup={expandedGroup}
           onExpandGroup={setExpandedGroup}
-          heading="My Groups"
+          heading="مجموعاتي"
           groups={myGroupsSorted}
         />
       )}
 
       {canCreateNewGroup && (
-        <MenuItem icon="add" href={newGroupLink} label="New private group" />
+        <MenuItem icon="add" href={newGroupLink} label="مجموعة خاصة جديدة" />
       )}
     </Menu>
   );

@@ -167,7 +167,7 @@ export default function SearchInput({ alwaysExpanded, query, onSearch }) {
         dir="auto"
         type="text"
         name="query"
-        placeholder={(isLoading && 'Loading…') || 'Search…'}
+        placeholder={(isLoading && 'Loading…') || 'البحث...'}
         disabled={isLoading}
         inputRef={input}
         value={pendingQuery || ''}
@@ -181,7 +181,7 @@ export default function SearchInput({ alwaysExpanded, query, onSearch }) {
             icon="search"
             onClick={() => input.current?.focus()}
             size="small"
-            title="Search annotations"
+            title="البحث في الكلمات الموسمة"
           />
         </div>
       )}

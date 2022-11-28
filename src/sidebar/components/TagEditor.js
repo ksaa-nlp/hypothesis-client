@@ -290,7 +290,7 @@ function TagEditor({
           onKeyDown={handleKeyDown}
           onFocus={handleFocus}
           inputRef={inputEl}
-          placeholder="Add new tags"
+          placeholder="اضافة وسم جديد"
           type="text"
           autoComplete="off"
           aria-autocomplete="list"
