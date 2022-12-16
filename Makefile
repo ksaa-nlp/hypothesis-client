@@ -101,8 +101,8 @@ python:
 
 .PHONY: build
 build: node_modules/.uptodate
-	yarn run build
+	npm run build
 
 node_modules/.uptodate: package.json yarn.lock
-	yarn install
+	npm install --force
 	@touch $@
