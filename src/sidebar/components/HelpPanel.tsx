@@ -87,8 +87,8 @@ function HelpPanel({ session }: HelpPanelProps) {
     !!store.profile().preferences.show_sidebar_tutorial;
 
   const subPanelTitles = {
-    tutorial: 'Getting started',
-    versionInfo: 'About this version',
+    tutorial: 'بدء الاستخدام',
+    versionInfo: 'عن هذه النسخة',
   };
   type PanelKey = keyof typeof subPanelTitles;
 
@@ -151,14 +151,14 @@ function HelpPanel({ session }: HelpPanelProps) {
             <HelpPanelNavigationButton
               onClick={e => openSubPanel(e, 'tutorial')}
             >
-              Getting started
+             بدء الاستخدام
             </HelpPanelNavigationButton>
           )}
           {activeSubPanel === 'tutorial' && (
             <HelpPanelNavigationButton
               onClick={e => openSubPanel(e, 'versionInfo')}
             >
-              About this version
+              عن هذه النسخة
             </HelpPanelNavigationButton>
           )}
         </div>

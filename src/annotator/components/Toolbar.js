@@ -125,7 +125,7 @@ export default function Toolbar({
             // of the edge of the sidebar in clean theme
             'shadow-sidebar'
           )}
-          title="Close annotation sidebar"
+          title="اغلاق القائمة الجانبية للتوسيم"
           icon="cancel"
           onClick={closeSidebar}
         />
@@ -142,7 +142,7 @@ export default function Toolbar({
               'border-l border-b'
             )}
             buttonRef={toggleSidebarRef}
-            title="Annotation sidebar"
+            title="عرض القائمة الجانبية للتوسيم"
             icon={isSidebarOpen ? 'caret-right' : 'caret-left'}
             expanded={isSidebarOpen}
             pressed={isSidebarOpen}
@@ -150,7 +150,7 @@ export default function Toolbar({
           />
           <div className="space-y-px-1.5 mt-px-2">
             <ToolbarButton
-              title="Show highlights"
+              title="اظهار الكلمات المظللة "
               icon={showHighlights ? 'show' : 'hide'}
               selected={showHighlights}
               onClick={toggleHighlights}
@@ -158,8 +158,8 @@ export default function Toolbar({
             <ToolbarButton
               title={
                 newAnnotationType === 'note'
-                  ? 'New page note'
-                  : 'New annotation'
+                  ? 'ملاحظة جديدة للصفحة '
+                  : 'توسيم جديد'
               }
               icon={newAnnotationType === 'note' ? 'note' : 'annotate'}
               onClick={createAnnotation}

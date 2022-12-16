@@ -333,7 +333,7 @@ function Toolbar({ isPreviewing, onCommand, onTogglePreview }) {
           aria-label="Formatting help"
         />
         <ToolbarButton
-          label={isPreviewing ? 'Write' : 'Preview'}
+          label={isPreviewing ? 'كتابة' : 'معاينة'}
           onClick={onTogglePreview}
         />
       </div>

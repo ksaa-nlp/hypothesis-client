@@ -69,7 +69,7 @@ function AnnotationPublishControl({
           size="large"
           variant="primary"
         >
-          Post to {isPrivate ? 'Only Me' : group.name}
+          النشر في {isPrivate ? 'خاص بي' : group.name}
         </LabeledButton>
         {/* This wrapper div is necessary because of peculiarities with
              Safari: see https://github.com/hypothesis/client/issues/2302 */}
@@ -119,7 +119,7 @@ function AnnotationPublishControl({
           onClick={onCancel}
           size="large"
         >
-          Cancel
+          الغاء
         </LabeledButton>
       </div>
     </div>
